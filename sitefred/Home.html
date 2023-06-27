@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="PT-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Fred Lucena</title>
+    <script src="script.js"></script>
+</head>
+<body>
+    <header>
+      <nav class="fixed-menu">
+        <ul>
+          <li class="open">
+            <a href="#" class="fix">Cursos <span>▼</span></a>
+            <ul class="submenu">
+              <li><a href="BD.html" class="temp">Banco de Dados MY SQL</a></li>
+              <li><a href="excel.html" class="temp">Excel</a></li>
+            </ul>
+          </li>
+          <li><a href="sobre.html">Sobre</a></li>
+          <li><a href="forum.html">Fórum</a></li>
+          <li><a href="Cadastre-se.htm">Cadastre-se</a></li>
+          <li><a href="Login.html">Login</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div class="imagemLogo">
+        <img src="img/Monochrome Modern Technology Black Logo.png" alt="Fred_lucena_curso">
+    </div>
+    <div class="section1">
+      <img class="bancodeDados" src="img/banco-de-dados.png" alt="Imagem de aprendizado">
+      <div class="textoMotiva">
+          <p>Descubra uma incrível oportunidade de aprender com os cursos do Professor <span class="textoDestaque">Fred Lucena</span>, onde você terá acesso a conteúdos de qualidade, ministrados por um <span class="textoDestaque2">especialista renomado na área de tecnologia</span>, de forma inteiramente gratuita.</p>
+      </div>
+      <br>
+  </div>
+    </div>
+    <section class="cards">
+      <div class="container">
+        <div>
+          <img src="img/4492311.png">
+          <h3>Banco de Dados</h3>
+          <p>embarque em uma jornada emocionante no curso de Banco de Dados, onde você aprenderá os fundamentos, as melhores práticas e as técnicas avançadas para criar e gerenciar bancos de dados relacionais. Não perca tempo, inscreva-se agora e mergulhe no universo dos dados!"</p>
+          <div><button id="meuBotao" class="saiba"><a href="bancoDados.html">Saiba Mais</a> </button></div>
+        </div>
+        <div>
+          <img src="img/Ícone-Logo-Excel-PNG.png">
+          <h3>Execel Básico</h3>
+          <p>Potencialize suas habilidades em manipulação e análise de dados com o curso de Excel. Descubra como aproveitar ao máximo essa poderosa ferramenta e torne-se um mestre em planilhas eletrônicas. Aprenda a criar fórmulas complexas, automatizar tarefas.</p>
+          <div><button id="meuBotao" class="saiba"><a href="excel.html">Saiba Mais</a> </button></div>
+        </div>
+    </section>
+    <footer class="footer1">
+        <div class="container">
+          <div>
+            <h3>Linkedin</h3>
+            <p>
+              Fred.lucena@gmail.com
+            </p>
+          </div>
+          <div>
+            <h3>CONTATO</h3>
+            <p>
+              <img src="img/mail.png">Contato:<br>
+              Fred.lucena@gmail.com
+            </p>
+          </div>
+        </div>
+      </footer>
+      <footer class="footer2">
+        <div class="container">
+          <p>© 2023 Todos os direitos reservados a Fred Lucena Cursos</p>
+        </div>
+      <script>
+          // Obtém o elemento do item de menu "Cursos"
+        var cursosItem = document.querySelector('.open');
+
+        // Obtém o elemento do submenu
+        var submenu = document.querySelector('.submenu');
+
+      
+          
+          // Alterna a exibição do submenu ao clicar
+          submenu.classList.toggle('show');
+        
+
+
+      </script>      
+</body>
+</html>

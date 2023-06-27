@@ -1,0 +1,393 @@
+body {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+    margin: 0;
+    padding: 0;
+}
+
+/*css do menu*/
+
+.fixed-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 30px;
+   
+}
+
+nav ul li a {
+    color: #fff;
+    margin: 0 3px;
+    padding: 15px 20px;
+    text-decoration: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    margin-bottom: -10px;
+    font-size: 18px;
+}
+
+nav ul li a:hover {
+    color: #004aad;
+}
+
+nav {
+    background: #7ed957;
+    margin-top: 50px;
+    margin: 0px;
+}
+
+.submenu {
+    display: none;
+    background-color: #f2f2f2;
+    padding: 10px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+  }
+  
+  .open:hover .submenu {
+    display:inline-flex;
+  }
+  
+  .submenu li {
+    margin-bottom: 5px;
+    list-style: none;
+  }
+  
+  .submenu li a {
+    color: #004aad;
+    text-decoration: none;
+  }
+  
+  .submenu li a:hover {
+    color: #7ed957;
+  }
+  
+
+/* Estilos para a página inicial */
+h1 {
+    color: #333;
+}
+
+p {
+    color: #666;
+}
+
+/* Estilos para os cursos */
+.course {
+    margin-bottom: 20px;
+}
+
+.course h2 {
+    color: #333;
+}
+
+.course p {
+    color: #888;
+}
+.section1 {
+    padding: 23px;
+    background-color: #004aad;
+    margin-bottom: 100px;
+    text-align: justify;
+    align-items: center;
+    text-align: center;
+}
+.section2 {
+    padding: 23px;
+    background-color: #004aad;
+    margin-bottom: 100px;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.section h2 {
+    color: #333;
+}
+
+.section p {
+    color: #666;
+}
+
+.section img {
+    max-width: 500%;
+}
+
+/*CSS DA LOGO*/
+.logo {
+    float: left;
+    border-radius: 50%;
+    overflow: hidden;
+    width: 100px; /* Ajuste o tamanho da logo conforme necessário */
+    height: 100px; /* Ajuste o tamanho da logo conforme necessário */
+   
+}
+
+.logo img {
+    max-height: 100px;
+    width: 100%;
+    height: auto;
+}
+
+.imagemLogo img{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+/* CSS DAS SECTIONS ONDE VAI INCLUIR BOTOES E OQUE TIVER RELACIONADO A ELES*/
+.section1 img {
+    width: 750px;
+    height:700px%;
+    border-radius: 3%;
+    display: inline-block;
+  
+}
+
+/*TEXTO DE DESTAQUE */
+.textoDestaque {
+    color: rgb(247, 101, 5); /* Substitua "red" pela cor desejada */
+  }
+
+  .textoDestaque2 {
+    color: #7ed957; /* Substitua "red" pela cor desejada */
+  }
+/*---------------------------------------------------------------*/
+.bancodeDados{
+    
+    vertical-align: top;
+    width: 115px;
+    margin-right: 40px;
+}
+
+.textoMotiva{
+    font-size: 30px;
+}
+.textoMotiva p {
+    color: #fff;
+}
+
+.botaoComeçar{
+    width: 400px;
+    height: 50px;
+    border: none;
+    outline: none;
+    color:#004aad;
+    background: #111;
+    cursor: pointer;
+    z-index: 0;
+    border-radius: 10px;
+    margin-top: -75px;
+    font-family:'Segoe UI', Tahoma, Verdana, sans-serif;
+    font-size:150%;
+    text-align: center;
+    position: absolute;
+    top: 169%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+}
+
+.botao1 .botaoComeçar {
+    margin: -30% 40;
+    
+}
+
+.botaoComeçar a {
+    text-decoration: none;
+    text-align: center;
+    width: 20px;
+    color: #004aad;
+}
+
+.botaoComeçar:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.botaoComeçar:active {
+    color: #7ed957
+}
+.botaoComeçar:active:after {
+    background: transparent;
+}
+.botaoComeçar:hover:before {
+    opacity: 1;
+}
+
+.botaoComeçar:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #7ed957;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+/*CARDS DOS CURSOS*/
+section.cards {
+	background: #FFF;
+	padding: 50px 0;
+    margin-top: -10%;
+}
+
+section.cards div.container div {
+	display: inline-block;
+	width: 22%;
+	border: solid 1px #7ed957;
+	margin: 0 0.8%;
+	text-align: center;
+}
+
+section.cards div.container div img {
+	margin-top: 10px;
+	width: 50%;
+}
+
+section.cards div.container div h3 {
+	width: 80%;
+	margin-left: 10%;
+    color: #004aad;
+}
+
+section.cards div.container div p {
+	width: 80%;
+	margin-left: 10%;
+}
+
+section.cards div.container div div {
+	width: 80%;
+	margin-left: 10%;
+	margin-bottom: 10px;
+	border: 0;
+}
+.container {
+	margin: 0 0%;
+	text-align: center;
+    margin-top: auto;
+}
+
+#meuBotao {
+    /* Estilos personalizados aqui */
+    background-color: #7ed957;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    font-size: 16px;
+    border-radius: 8px;
+ }
+ 
+ #meuBotao a {
+    /* Estilos para o link dentro do botão */
+    color: #fff;
+    text-decoration: none;
+ }
+
+/*----------------FIM DOS CARDS*---------------------------/
+/*Footers*/
+footer.footer1 {
+	background: #0097b2;
+	padding: 30px 0;
+}
+
+footer.footer1 div.container div {
+	display: inline-block;
+	width: 23%;
+	margin: 0 0.4%;
+	text-align: left;
+}
+
+footer.footer1 div.container div h3 {
+	margin: 0;
+	padding: 0;
+	font-size: 16px;
+	font-weight: 800;
+    color: #004aad;
+}
+
+footer.footer1 div.container div p {
+	font-size: 12px;
+	font-weight: 500;
+	color: #fff;
+}
+
+footer.footer1 div.container div p img {
+	height: 12px;
+	margin-right: 4px;
+}
+
+/* FOOTER 2 */
+
+footer.footer2 {
+	background: #7ed957;
+	padding: 2px 0;
+}
+
+footer.footer2 div.container {
+	text-align: left;
+	background: #7ed957;
+}
+
+footer.footer2 p {
+	font-size: 14px;
+    color:#111;
+}
+
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+/*--------------------------------------------------------------*/
+/*PARA DEIXAR O SITE RESPONSIVO*/
+@media screen and (max-width: 768px) {
+  /* Estilos para telas menores ou iguais a 768px (tablets e celulares) */
+  div {
+    font-size: 14px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  /* Estilos para telas entre 768px e 1024px (tablets) */
+  div {
+    font-size: 16px;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  /* Estilos para telas maiores que 1024px (desktops) */
+  div {
+    font-size: 18px;
+  }
+}
+/*até aqui para deixar responsivo*/

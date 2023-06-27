@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Fórum</title>
+    <style>
+        body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #023047;
+}
+
+header {
+    /* Estilos para o cabeçalho do fórum */
+}
+
+main {
+    margin: 20px;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+#questionForm {
+    margin-bottom: 20px;
+}
+
+#questionText {
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    resize: vertical;
+}
+
+#questionImage {
+    margin-bottom: 10px;
+}
+
+button[type="submit"] {
+    background-color: #7ed957;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+ul#forumList {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 3px;
+}
+
+.question {
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 7px;
+    box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.4);
+}
+
+.question-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.question-date {
+    font-size: 12px;
+    color: #666;
+}
+
+.question-user {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.question-content {
+    margin-bottom: 10px;
+}
+
+.question-image {
+    max-width: 100%;
+    max-height: 200px;
+    margin-bottom: 10px;
+}
+
+.answers {
+    margin-top: 10px;
+}
+
+.answer-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.answer-date {
+    font-size: 12px;
+    color: #666;
+}
+
+.answer-user {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.answer-content {
+    margin-bottom: 5px;
+}
+
+.fixed-menu {
+    background-color: #7ed957;
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.fixed-menu {
+            background-color: #7ed957;
+            padding: 10px;
+            position: fixed;
+            top: 0;
+            width: 100%;
+        }
+
+        .fixed-menu ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .fixed-menu li {
+            margin-right: 20px;
+            position: relative;
+        }
+
+        .fixed-menu li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .submenu {
+            display: none;
+            position: absolute;
+            background-color: #7ed957;
+            padding: 10px;
+            margin-top: 3px;
+            top: 100%;
+            left: 0;
+        }
+
+        .fixed-menu li:hover .submenu {
+            display: block;
+            color: #004aad;
+        }
+
+        .submenu a {
+            color: #00f; 
+        }
+        .fixed-menu li a:hover{
+            color: #004aad;
+        }
+
+.footer {
+    background: linear-gradient(to bottom, #7ed957, #004aad);
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+    margin-top: 20%;
+}
+.footer p {
+    color: #fff;
+}
+
+</style>
+</head>
+<body>
+    <header>
+        <nav class="fixed-menu">
+            <ul>
+                <li><a href="Home.html">Inicio</a></li>
+              <li class="open">
+                <a href="#" class="fix">Cursos <span>▼</span></a>
+                <ul class="submenu">
+                  <li><a href="BD.html" class="temp">Banco de Dados MY SQL</a></li>
+                  <li><a href="excel.html" class="temp">Excel</a></li>
+                </ul>
+              </li>
+              <li><a href="sobre.html">Sobre</a></li>
+              <li><a href="forum.html">Fórum</a></li>
+              <li><a href="Cadastre-se.htm">Cadastre-se</a></li>
+              <li><a href="Login.html">Login</a></li>
+            </ul>
+          </nav>
+    </header>
+
+    <main>
+        <h1>Fórum</h1>
+
+        <!-- Formulário para fazer uma pergunta -->
+        <form id="questionForm">
+            <textarea id="questionText" placeholder="Faça uma pergunta"></textarea>
+            <input type="file" id="questionImage" accept="image/*" />
+            <button type="submit">Enviar Pergunta</button>
+        </form>
+
+        <!-- Lista de perguntas e respostas -->
+        <ul id="forumList">
+            <!-- Cada item da lista representa uma pergunta e suas respostas -->
+            <li>
+                <div class="question">
+                    <div class="question-info">
+                        <span class="question-date">Data e Hora da Pergunta</span>
+                        <span class="question-user">Nome do Usuário</span>
+                    </div>
+                    <div class="question-content">
+                        <!-- Conteúdo da pergunta -->
+                    </div>
+                    <div class="question-image">
+                        <!-- Imagem da pergunta (se houver) -->
+                    </div>
+                </div>
+                <div class="answers">
+                    <!-- Lista de respostas -->
+                    <ul>
+                        <li>
+                            <div class="answer-info">
+                                <span class="answer-date">Data e Hora da Resposta</span>
+                                <span class="answer-user">Nome do Usuário</span>
+                            </div>
+                            <div class="answer-content">
+                                <!-- Conteúdo da resposta -->
+                            </div>
+                        </li>
+                        <!-- Outras respostas... -->
+                    </ul>
+                </div>
+            </li>
+            <!-- Outras perguntas... -->
+        </ul>
+    </main>
+
+    <footer class="footer">
+        <p>© 2023 Todos os direitos reservados a Fred Lucena Cursos</p>
+    </footer>
+    <script>
+        // Função para manipular o envio do formulário
+        function handleFormSubmit(event) {
+            event.preventDefault(); // Impede o envio padrão do formulário
+
+            // Obter os valores dos campos de pergunta
+            const questionText = document.getElementById('questionText').value;
+            const questionImage = document.getElementById('questionImage').files[0];
+
+            // Criar um objeto de data atual
+            const currentDate = new Date();
+            const formattedDate = currentDate.toLocaleString();
+
+            // Criar elementos HTML para a pergunta
+            const questionItem = document.createElement('li');
+            const questionContent = document.createElement('div');
+            const questionInfo = document.createElement('div');
+            const questionDate = document.createElement('span');
+            const questionUser = document.createElement('span');
+            const questionTextElement = document.createElement('p');
+            const questionImageElement = document.createElement('img');
+
+            // Definir classes CSS para os elementos
+            questionItem.classList.add('question');
+            questionInfo.classList.add('question-info');
+            questionDate.classList.add('question-date');
+            questionUser.classList.add('question-user');
+            questionContent.classList.add('question-content');
+            questionImageElement.classList.add('question-image');
+
+            // Definir o conteúdo dos elementos
+            questionDate.textContent = formattedDate;
+            questionUser.textContent = 'Nome do Usuário'; // Altere para o nome do usuário logado
+            questionTextElement.textContent = questionText;
+
+            // Verificar se foi enviada uma imagem
+            if (questionImage) {
+                const reader = new FileReader();
+
+                reader.onload = function(e) {
+                    questionImageElement.src = e.target.result;
+                };
+
+                reader.readAsDataURL(questionImage);
+            }
+
+            // Adicionar os elementos ao HTML
+            questionInfo.appendChild(questionDate);
+            questionInfo.appendChild(questionUser);
+            questionContent.appendChild(questionTextElement);
+            questionContent.appendChild(questionImageElement);
+            questionItem.appendChild(questionInfo);
+            questionItem.appendChild(questionContent);
+            document.getElementById('forumList').appendChild(questionItem);
+
+            // Limpar os campos do formulário
+            document.getElementById('questionText').value = '';
+            document.getElementById('questionImage').value = '';
+        }
+
+        // Associar o evento de envio do formulário à função de manipulação
+        document.getElementById('questionForm').addEventListener('submit', handleFormSubmit);
+        /*------------------------------------------------------*/
+        // Lista de palavras proibidas
+        var palavrasProibidas = ["", "palavra2", "palavra3"];
+
+        function verificarPalavrasProibidas(mensagem) {
+            for (var i = 0; i < palavrasProibidas.length; i++) {
+                if (mensagem.includes(palavrasProibidas[i])) {
+                    return true; // Palavra proibida encontrada
+                }
+            }
+            return false; // Nenhuma palavra proibida encontrada
+        }
+
+        function enviarMensagem(event) {
+            event.preventDefault();
+
+            var mensagemElement = document.getElementById('mensagem');
+            var mensagem = mensagemElement.value;
+
+            // Verificar se a mensagem contém palavras proibidas
+            if (verificarPalavrasProibidas(mensagem)) {
+                alert('Sua mensagem contém palavras proibidas. Por favor, revise o conteúdo.');
+                return;
+            }
+
+            // Enviar a mensagem para o fórum (salvar no banco de dados ou exibir na página)
+
+            // Limpar o campo de mensagem
+            mensagemElement.value = '';
+        }
+        
+        var cursosItem = document.querySelector('.open');
+
+// Obtém o elemento do submenu
+var submenu = cursosItem.querySelector('.submenu');
+
+// Função para exibir o submenu
+function showSubmenu() {
+    submenu.style.display = 'block';
+}
+
+// Função para ocultar o submenu
+function hideSubmenu() {
+    submenu.style.display = 'none';
+}
+
+// Adiciona os eventos de "mouseenter" e "mouseleave" ao item de menu "Cursos"
+cursosItem.addEventListener('mouseenter', showSubmenu);
+cursosItem.addEventListener('mouseleave', hideSubmenu);
+                                
+    </script>
+</body>
+</html>

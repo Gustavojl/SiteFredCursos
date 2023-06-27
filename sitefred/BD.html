@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="PT-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Sobre Banco de Dados SQL Server</title>
+  <style>
+    body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #023047;
+    background: #fff;
+    }
+
+    .page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to bottom, #004aad, #7ed957);
+    margin-top: 20px;
+    }
+
+    .formLogin {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: 7px;
+    padding: 40px;
+    box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.4);
+    gap: 5px;
+    margin-top: auto;
+    }
+
+    .center-image {
+    display: block;
+    margin: 0 auto;
+    width: 300px;
+    height: auto;
+    margin-top: 20px;
+    }
+
+    .formLogin h3 {
+    padding: 0;
+    margin: 0;
+    font-weight: 100px;
+    font-size: 2.3em;
+    color: #7ed957;
+    }
+
+    .formLogin p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 15px;
+    }
+
+    .formLogin h4 {
+    margin-top: 20px;
+    }
+
+    .curriculum {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    padding-left: 20px;
+    }
+
+    .btn-inscreva-se {
+    background-color: #7ed957;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    border: none !important;
+    transition: all linear 160ms;
+    cursor: pointer;
+    margin-top: 20px;
+    padding: 10px 20px;
+    border-radius: 4px;
+    }
+
+    .btn-inscreva-se:hover {
+    transform: scale(1.05);
+    background-color: #004aad;
+    }
+
+    .fixed-menu {
+    background-color: #7ed957;
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.fixed-menu {
+            background-color: #7ed957;
+            padding: 10px;
+            position: fixed;
+            top: 0;
+            width: 100%;
+        }
+
+        .fixed-menu ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .fixed-menu li {
+            margin-right: 20px;
+            position: relative;
+        }
+
+        .fixed-menu li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .submenu {
+            display: none;
+            position: absolute;
+            background-color: #7ed957;
+            padding: 10px;
+            margin-top: 3px;
+            top: 100%;
+            left: 0;
+        }
+
+        .fixed-menu li:hover .submenu {
+            display: block;
+            color: #004aad;
+        }
+
+        .submenu a {
+            color: #00f; 
+        }
+        .fixed-menu li a:hover{
+            color: #004aad;
+        }
+        .footer {
+    background: linear-gradient(to bottom, #7ed957, #004aad);
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+}
+.footer p {
+    color: #fff;
+}
+
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="fixed-menu">
+      <ul>
+        <li class="open">
+          <a href="#" class="fix">Cursos <span>▼</span></a>
+          <ul class="submenu">
+            <li><a href="#BD.html" class="temp">Banco de Dados MY SQL</a></li>
+            <li><a href="#excel.html" class="temp">Excel</a></li>
+          </ul>
+        </li>
+        <li><a href="sobre.html">Sobre</a></li>
+        <li><a href="forum.html">Fórum</a></li>
+        <li><a href="Cadastre-se.htm">Cadastre-se</a></li>
+        <li><a href="Login.html">Login</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <div class="page">
+    <div class="formLogin">
+      <h3>Banco de Dados SQL Server</h3>
+      <p>O Banco de Dados SQL Server é um sistema de gerenciamento de banco de dados relacional desenvolvido pela Microsoft. Ele é amplamente utilizado para armazenar, gerenciar e recuperar dados em aplicativos de software empresariais e de pequeno porte.</p>
+      <p>O SQL Server oferece recursos avançados, como suporte a transações, consultas complexas, replicação de dados, integração com outras tecnologias da Microsoft e recursos de segurança robustos.</p>
+      <p>Com o SQL Server, é possível criar e gerenciar bancos de dados, tabelas, índices, visões, procedimentos armazenados, funções e muito mais. Ele é uma escolha popular para desenvolvedores, administradores de banco de dados e empresas que precisam de uma solução confiável e escalável para suas necessidades de armazenamento e gerenciamento de dados.</p>
+      
+      <h4>Grade Curricular:</h4>
+      <ul class="curriculum">
+        <li>Introdução ao SQL Server</li>
+        <li>Modelagem de Dados</li>
+        <li>Consultas SQL</li>
+        <li>Administração de Banco de Dados</li>
+        <li>Backup e Restauração</li>
+        <li>Otimização de Consultas</li>
+      </ul>
+      
+      <button class="btn-inscreva-se">Inscreva-se</button>
+    </div>
+  </div>
+  
+  <footer class="footer">
+    <p>© 2023 Todos os direitos reservados a Fred Lucena Cursos</p>
+  </footer>
+
+  <script>
+    // Obtém o elemento do item de menu "Cursos"
+  var cursosItem = document.querySelector('.open');
+
+  // Obtém o elemento do submenu
+  var submenu = document.querySelector('.submenu');
+
+
+    
+    // Alterna a exibição do submenu ao clicar
+    submenu.classList.toggle('show');
+
+    document.addEventListener('DOMContentLoaded', function() {
+            var cursosItem = document.querySelector('.fixed-menu .open');
+            var submenu = cursosItem.querySelector('.submenu');
+
+            cursosItem.addEventListener('mouseover', function() {
+                submenu.style.display = 'block';
+            });
+
+            cursosItem.addEventListener('mouseout', function() {
+                submenu.style.display = 'none';
+            });
+        });
+</script>      
+</body>
+</html>

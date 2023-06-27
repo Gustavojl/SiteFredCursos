@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Cadastro</title>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom, #004aad, #7ed957);
+            height: 100vh;
+        }
+
+        form {
+            max-width: 400px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 7px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 5%;
+        }
+
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #7ed957;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="date"],
+        input[type="tel"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            font-size: 14px;
+            border: 1px solid #ccc;
+            margin-bottom: 10px;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        button[type="submit"] {
+            background-color: #7ed957;
+            color: #fff;
+            font-size: 14px;
+            font-weight: 600;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        footer {
+            margin-top: 9%;
+            text-align: center;
+        }
+
+        .fixed-menu {
+            background-color: #7ed957;
+            padding: 10px;
+            position: fixed;
+            top: 0;
+            width: 100%;
+        }
+
+        .fixed-menu ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .fixed-menu li {
+            margin-right: 20px;
+            position: relative; /* Adicionado */
+        }
+
+        .fixed-menu li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .submenu {
+            display: none;
+            position: absolute;
+            background-color: #7ed957;
+            padding: 10px;
+            margin-top: 3px;
+            top: 100%; /* Adicionado */
+            left: 0; /* Adicionado */
+        }
+
+        .fixed-menu li:hover .submenu {
+            display: block;
+        }
+
+        .fixed-menu li a:hover{
+            color: #004aad;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="fixed-menu">
+            <ul>
+                <li><a href="Home.html">Inicio</a></li>
+                <li class="open">
+                    <a href="#" class="fix">Cursos <span>▼</span></a>
+                    <ul class="submenu">
+                        <li><a href="BD.html" class="temp">Banco de Dados MY SQL</a></li>
+                        <li><a href="excel.html" class="temp">Excel</a></li>
+                    </ul>
+                </li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="forum.html">Fórum</a></li>
+                <li><a href="Cadastre-se.htm">Cadastre-se</a></li>
+                <li><a href="Login.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <form id="cadastroForm">
+        <h1>Faça seu Cadastro</h1>
+        <input type="text" placeholder="Nome Completo para seu Certificado" id="nomeCompleto" required>
+        <input type="email" placeholder="seu melhor E-mail" id="email" required>
+        <input type="date" placeholder="Data de nascimento" id="dataNascimento" required>
+        <input type="tel" placeholder="WhatsApp com DDD" id="whatsapp" required>
+        <input type="password" placeholder="Senha" id="senha" required>
+        <button type="submit">Cadastrar</button>
+    </form>
+
+    <p id="mensagem" style="display: none;"></p>
+
+    <script>
+        document.getElementById('cadastroForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const nomeCompleto = document.getElementById('nomeCompleto').value;
+            const email = document.getElementById('email').value;
+            const dataNascimento = document.getElementById('dataNascimento').value;
+            const whatsapp = document.getElementById('whatsapp').value;
+            const senha = document.getElementById('senha').value;
+
+            if (nomeCompleto && email && dataNascimento && whatsapp && senha) {
+                const mensagem = document.getElementById('mensagem');
+                mensagem.innerText = 'Cadastro realizado com sucesso!';
+                mensagem.style.display = 'block';
+
+                setTimeout(function() {
+                    window.location.href = 'login.html';
+                }, 3000);
+            } else {
+                alert('Preencha todos os campos do formulário.');
+            }
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+            var cursosItem = document.querySelector('.fixed-menu .open');
+            var submenu = cursosItem.querySelector('.submenu');
+
+            cursosItem.addEventListener('mouseover', function() {
+                submenu.style.display = 'block';
+            });
+
+            cursosItem.addEventListener('mouseout', function() {
+                submenu.style.display = 'none';
+            });
+        });
+    </script>
+
+    <footer>
+        <p>© 2023 Fred Lucena. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>

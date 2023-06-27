@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="PT-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Fred Lucena - Sobre</title>
+<style>
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #7ed957;
+}
+
+.fixed-menu {
+    background-color: #7ed957;
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.fixed-menu {
+background-color: #7ed957;
+padding: 10px;
+position: fixed;
+top: 0;
+width: 100%;
+}
+
+.fixed-menu ul {
+list-style-type: none;
+margin: 0;
+padding: 0;
+display: flex;
+justify-content: center;
+}
+
+.fixed-menu li {
+margin-right: 20px;
+position: relative;
+}
+
+.fixed-menu li a {
+color: #fff;
+text-decoration: none;
+font-size: 16px;
+font-weight: bold;
+}
+
+.submenu {
+display: none;
+position: absolute;
+background-color: #7ed957;
+padding: 10px;
+margin-top: 3px;
+top: 100%;
+left: 0;
+}
+
+.fixed-menu li:hover .submenu {
+display: block;
+color: #004aad;
+}
+
+.submenu a {
+color: #00f; 
+}
+.fixed-menu li a:hover{
+color: #004aad;
+}
+
+.page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin-top: 20px;
+    padding: 20px;
+}
+
+.formLogin {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: 7px;
+    padding: 40px;
+    box-shadow: 10px 10px 40px rgba(255, 255, 255, 0.4);
+    gap: 5px;
+}
+
+.formLogin h3 {
+    padding: 0;
+    margin: 0;
+    font-weight: bold;
+    font-size: 2.3em;
+    color: #7ed957;
+}
+
+.formLogin p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 25px;
+}
+
+.logo3-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.logo3 {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.footer {
+    background: linear-gradient(to bottom, #7ed957, #004aad);
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+}
+.footer p {
+    color: #fff;
+}
+
+</style>
+</head>
+<body>
+    <header>
+        <nav class="fixed-menu">
+            <ul>
+                <li><a href="Home.html">Inicio</a></li>
+                <li class="open">
+                    <a href="#" class="fix">Cursos <span>▼</span></a>
+                    <ul class="submenu">
+                        <li><a href="BD.html" class="temp">Banco de Dados MY SQL</a></li>
+                        <li><a href="excel.html" class="temp">Excel</a></li>
+                    </ul>
+                </li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="forum.html">Fórum</a></li>
+                <li><a href="Cadastre-se.htm">Cadastre-se</a></li>
+                <li><a href="Login.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="page">
+        <div class="formLogin">
+            <h3>Sobre Fred Lucena</h3>
+            <p>O Professor Fred Lucena é um especialista renomado na área de tecnologia, com vasta experiência e conhecimento. Ele dedica-se a compartilhar seu conhecimento por meio de cursos online gratuitos, proporcionando aos alunos a oportunidade de aprenderem com qualidade e excelência.</p>
+            <p>Seu objetivo é capacitar e empoderar os estudantes, fornecendo as habilidades necessárias para terem sucesso na área de tecnologia. Com um currículo abrangente e materiais de ensino completos, os cursos do Professor Fred Lucena são uma escolha confiável para aqueles que desejam se destacar no mercado de trabalho.</p>
+            <p>Junte-se a nós e comece sua jornada de aprendizado com os cursos do Professor Fred Lucena!</p>
+        </div>
+        <div class="logo3-container">
+            <img class="logo3" src="img/Untitled.png" alt="Logo Fred Lucena">
+        </div>
+    </div>
+    <footer class="footer">
+        <p>© 2023 Todos os direitos reservados a Fred Lucena Cursos</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var cursosItem = document.querySelector('.fixed-menu .open');
+            var submenu = cursosItem.querySelector('.submenu');
+
+            cursosItem.addEventListener('mouseover', function() {
+                submenu.style.display = 'block';
+            });
+
+            cursosItem.addEventListener('mouseout', function() {
+                submenu.style.display = 'none';
+            });
+        });
+    </script>
+</body>
+</html>
